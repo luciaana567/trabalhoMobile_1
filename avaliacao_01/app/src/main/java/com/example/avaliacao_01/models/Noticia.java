@@ -1,21 +1,32 @@
 package com.example.avaliacao_01.models;
 
+import android.graphics.drawable.Drawable;
+
 import java.util.Date;
 
 public class Noticia {
     public int id;
     public String titulo;
-    public String urlImagem;
+    public Integer urlImagem;
     public String corpoTexto;
     public Date dataPublicacao;
     public String autorTexto;
 
-    public Noticia(int id, String titulo, String urlImagem, String corpoTexto, Date dataPublicacao, String autorTexto) {
+
+    public Noticia(int id, String titulo, Integer urlImagem, String corpoTexto, Date dataPublicacao, String autorTexto) {
         this.autorTexto = autorTexto;
         this.corpoTexto = corpoTexto;
         this.urlImagem = urlImagem;
         this.dataPublicacao = dataPublicacao;
         this.titulo = titulo;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -27,11 +38,11 @@ public class Noticia {
         this.titulo = titulo;
     }
 
-    public String getUrlImagem() {
+    public Integer getUrlImagem() {
         return urlImagem;
     }
 
-    public void setUrlImagem(String urlImagem) {
+    public void setUrlImagem(Integer urlImagem) {
         this.urlImagem = urlImagem;
     }
 
