@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity {
         Integer dia = data.getDay();
         Integer mes = data.getMonth();
 
-        if(dia > 9) { dataFormatada = 0+dia+"/";
+        if(dia < 9) { dataFormatada = 0+dia+"/";
         } else { dataFormatada = dia+"/"; }
-        if(mes > 9) { dataFormatada = dataFormatada+mes+"/";
+        if(mes < 9) { dataFormatada = dataFormatada+mes+"/";
         } else { dataFormatada = dataFormatada+mes+"/"; }
 
         dataFormatada = dataFormatada+data.getYear();
